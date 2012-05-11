@@ -1,11 +1,11 @@
-## mongoid_has_arrr!
+## mongoid_has_arrr
 
 Dead simple Mongoid <=> ActiveRecord associations
 
 ### Usage and installation
 
 ```ruby
-gem "mongoid_has_arrr!"
+gem "mongoid_has_arrr"
 ```
 
 or 
@@ -17,7 +17,7 @@ gem install mongoid_has_arrr!
 In your code:
 
 ```ruby
-require 'mongoid_has_arrr!'
+require 'mongoid_has_arrr'
 
 class Book
 
@@ -45,7 +45,7 @@ class Book
 | HasAndBelongsToMany                     | ToDo                |
 | Mongoid integration into ActiveRecord   | ToDo                |
 
-## Contributing to mongoid_has_arrr!
+## Contributing to mongoid_has_arrr
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
