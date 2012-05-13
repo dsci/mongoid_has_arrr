@@ -92,6 +92,31 @@ describe "MongoidHasArrr" do
 
       end
 
+      context "build association" do
+        
+        before do
+          @address = subject.build_address(:name => "Leipzig")
+        end
+
+        it "successfully" do
+          @address.should be_instance_of City
+          subject.save
+        end
+      end
+
+      context "create association" do
+        
+        before do
+          @address = subject.create_address(:name => "Leipzig")
+        end
+
+        it "successfully" do
+          @address.should be_instance_of City
+          p @address
+          subject.address.id.should be @address.id
+          subject.address.name.should == @address.name
+        end
+      end
 
 
     end
