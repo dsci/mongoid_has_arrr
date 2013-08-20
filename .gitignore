@@ -10,6 +10,7 @@ doc
 
 # bundler
 .bundle
+Gemfile.lock
 
 # jeweler generated
 pkg
@@ -47,5 +48,10 @@ pkg
 # For rubinius:
 #*.rbc
 #
+
+# For RVM
 .rvmrc
+.ruby-gemset
+.ruby-version
+
 spec/db/test.sqlite3

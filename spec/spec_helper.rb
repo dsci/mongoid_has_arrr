@@ -24,7 +24,7 @@ rescue
 
 end
 
-begin 
+begin
   ActiveRecord::Migration.create_table :labels do |t|
     t.string :identifier
   end
@@ -32,7 +32,7 @@ rescue
 
 end
 
-begin 
+begin
   ActiveRecord::Migration.create_table :cities do |t|
     t.string :name
   end
@@ -40,6 +40,29 @@ rescue
 
 end
 
+begin
+  ActiveRecord::Migration.create_table :publishers do |t|
+    t.string  :name
+    t.string  :book_id
+  end
+rescue
+end
+
+begin
+  ActiveRecord::Migration.create_table :editors do |t|
+    t.integer :edited_book_id
+    t.string  :name
+  end
+rescue
+end
+
+begin
+  ActiveRecord::Migration.create_table :prices do |t|
+    t.float   :value
+    t.string  :book_id
+  end
+rescue
+end
 
 Mongoid.configure do |config|
   config.master = Mongo::Connection.new.db("ar_test")
@@ -50,5 +73,5 @@ end
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
-  
+
 end

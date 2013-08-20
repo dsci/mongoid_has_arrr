@@ -4,14 +4,16 @@ Dead simple Mongoid <=> ActiveRecord associations
 
 ### Usage and installation
 
+Tested for [Mongoid 2.x](http://two.mongoid.org).
+
 ```ruby
 gem "mongoid_has_arrr"
 ```
 
-or 
+or
 
 ```sh
-gem install mongoid_has_arrr!
+gem install mongoid_has_arrr
 ```
 
 In your code:
@@ -26,27 +28,36 @@ class Book
 
   field :title,       :type => String
 
-  with_active_record do 
+  with_active_record do
     belongs_to :author
     belongs_to :label, :foreign_key => "this_one_id"
     belongs_to :address, :foreign_key => "city_id", :class => "City"
+    has_one    :price
   end
-``` 
+```
 
-**Note:** You don't have to define any foreign_key fields! 
+**Note:** You don't have to define any foreign_key fields!
 
 ### Dones and TODOS
 
 | Association or Feature                  | Status              |
 |:----------------------------------------|:--------------------|
 | BelongsTo                               | Done                |
-| HasOne                                  | ToDo                |
+| HasOne                                  | Done                |
 | HasMany                                 | ToDo                |
 | HasAndBelongsToMany                     | ToDo                |
 | Mongoid integration into ActiveRecord   | ToDo                |
 
+## Tests
+
+Run
+
+```
+rspec spec
+```
+
 ## Contributing to mongoid_has_arrr
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project
@@ -57,6 +68,6 @@ class Book
 
 ## Copyright
 
-Copyright (c) 2012 [Daniel Schmidt](https://github.com/dsci). See LICENSE.txt for
+Copyright (c) 2012/2013 [Daniel Schmidt](https://github.com/dsci). See LICENSE.txt for
 further details.
 
