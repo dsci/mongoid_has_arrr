@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "mongoid_has_arrr"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel Schmidt"]
-  s.date = "2012-05-11"
+  s.date = "2013-08-20"
   s.description = "Easily integrate your ActiveRecord models into your Mongoid models"
   s.email = "dsci@code79.net"
   s.extra_rdoc_files = [
@@ -18,19 +18,31 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
+    ".gitignore",
     ".rspec",
     "Gemfile",
     "LICENSE.txt",
+    "README.md",
     "Rakefile",
     "VERSION",
     "lib/mongoid/active_record_relations.rb",
+    "lib/mongoid/associations/belongs_to.rb",
+    "lib/mongoid/associations/has_one.rb",
+    "lib/mongoid/builder.rb",
+    "lib/mongoid/commands.rb",
+    "lib/mongoid/optionize.rb",
     "lib/mongoid_has_arrr.rb",
-    "spec/spec_helper.rb"
+    "mongoid_has_arrr.gemspec",
+    "spec/db/test.db",
+    "spec/mongoid_has_arrr_spec.rb",
+    "spec/spec_helper.rb",
+    "spec/support/models/active_record.rb",
+    "spec/support/models/mongoid.rb"
   ]
   s.homepage = "http://github.com/dsci/mongoid_has_arrr"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.10"
+  s.rubygems_version = "1.8.25"
   s.summary = "Mongoid <=> ActiveRecord association integration"
 
   if s.respond_to? :specification_version then
@@ -40,8 +52,8 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<activerecord>, [">= 0"])
       s.add_runtime_dependency(%q<mongoid>, [">= 0"])
       s.add_runtime_dependency(%q<bson_ext>, [">= 0"])
-      s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<bundler>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<fuubar>, [">= 0"])
       s.add_development_dependency(%q<sqlite3>, [">= 0"])
@@ -49,8 +61,8 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<activerecord>, [">= 0"])
       s.add_dependency(%q<mongoid>, [">= 0"])
       s.add_dependency(%q<bson_ext>, [">= 0"])
-      s.add_dependency(%q<rspec>, ["~> 2.3.0"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
+      s.add_dependency(%q<bundler>, [">= 0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_dependency(%q<fuubar>, [">= 0"])
       s.add_dependency(%q<sqlite3>, [">= 0"])
@@ -59,8 +71,8 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<activerecord>, [">= 0"])
     s.add_dependency(%q<mongoid>, [">= 0"])
     s.add_dependency(%q<bson_ext>, [">= 0"])
-    s.add_dependency(%q<rspec>, ["~> 2.3.0"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
+    s.add_dependency(%q<bundler>, [">= 0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     s.add_dependency(%q<fuubar>, [">= 0"])
     s.add_dependency(%q<sqlite3>, [">= 0"])
