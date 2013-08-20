@@ -15,23 +15,13 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "mongoid_has_arrr"
-  gem.homepage = "http://github.com/datenspiel/mongoid_has_arrr"
+  gem.homepage = "http://github.com/dsci/mongoid_has_arrr"
   gem.license = "MIT"
   gem.summary = %Q{Mongoid <=> ActiveRecord association integration}
   gem.description = %Q{Easily integrate your ActiveRecord models into your Mongoid models}
   gem.email = "dsci@code79.net"
   gem.authors = ["Daniel Schmidt"]
-  gem.files = [
-    ".document",
-    ".rspec",
-    "Gemfile",
-    "LICENSE.txt",
-    "Rakefile",
-    "VERSION",
-    "spec/spec_helper.rb",
-    "lib/mongoid_has_arrr.rb",
-    "lib/mongoid/active_record_relations.rb"
-  ]
+  gem.files = `git ls-files`.split("\n")
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -48,13 +38,3 @@ RSpec::Core::RakeTask.new(:rcov) do |spec|
 end
 
 task :default => :spec
-
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "mongoid_has_arrr #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
